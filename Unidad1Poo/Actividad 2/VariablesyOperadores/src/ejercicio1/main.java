@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 /**
  * @author Jorman Noriega
+ * 
+ * 
  */
 public class main {
     public static void main(String[] args) {
