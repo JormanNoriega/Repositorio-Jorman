@@ -16,12 +16,6 @@ public class Contenedor {
     
     //constructor
 
-    public Contenedor() {
-        this.peso = 0;
-        this.area = 0;
-        this.valor = 0;
-    }
-
     public Contenedor(double peso, double area, double valor) {
         this.peso = peso;
         this.area = area;
