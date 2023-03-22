@@ -13,9 +13,7 @@ import java.util.ArrayList;
 public class Usuario {
     private String nombre;
     private String correo;
-    private String contraseña;
-    private ArrayList<Saldo> saldo = new Saldo<>();
-    
+    private String contraseña;   
     
 
     public Usuario() {
