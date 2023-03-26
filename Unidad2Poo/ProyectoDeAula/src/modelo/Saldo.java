@@ -4,6 +4,7 @@
  */
 package modelo;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -59,20 +60,28 @@ public class Saldo {
         this.deudas = deudas;
     }
 
-    public void registrarIngreso(Ingreso ingreso) {
-        this.ingresos.add(ingreso);
+    public void registrarIngreso(double ingreso,String asunto) {        
+        Ingreso nuevoIngreso= new Ingreso(ingreso, asunto);
+        this.ingresos.add(nuevoIngreso);
+        this.saldo+=ingreso;
+    }
+    
+    
+    public void registrarEgreso(double egreso,String asunto) {
+        Egreso nuevoEgreso= new Egreso(egreso, asunto);
+        this.egresos.add(nuevoEgreso);
+        this.saldo-=egreso;
     }
 
-    public void registrarEgreso(Egreso egreso) {
-        this.egresos.add(egreso);
-    }
-
-    public void registrarDeudas(Deudas deudas) {
-        this.deudas.add(deudas);
+    public void registrarDeudas(double deudas,String asunto,LocalDate fecha) {
+        Deudas nuevaDeuda = new Deudas(deudas, asunto, fecha);
+        this.deudas.add(nuevaDeuda);
     }
 
     @Override
     public String toString() {
-        return "Saldo{" + "saldo=" + saldo + ", ingresos=" + ingresos + ", egresos=" + egresos + ", deudas=" + deudas + '}';
-    }    
+        return " " + saldo;
+    }
+    
+    
 }

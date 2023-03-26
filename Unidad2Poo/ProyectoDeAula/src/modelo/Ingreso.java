@@ -18,14 +18,38 @@ public class Ingreso {
     public Ingreso() {
     }
 
-    public Ingreso(double ingreso, String asunto, LocalDate fecha) {
+    public Ingreso(double ingreso, String asunto) {
         this.ingreso = ingreso;
         this.asunto = asunto;
-        this.fecha = fecha;
+        this.fecha = LocalDate.now();
     }
 
+    public double getIngreso() {
+        return ingreso;
+    }
+
+    public void setIngreso(double ingreso) {
+        this.ingreso = ingreso;
+    }
+
+    public String getAsunto() {
+        return asunto;
+    }
+
+    public void setAsunto(String asunto) {
+        this.asunto = asunto;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+        
     @Override
     public String toString() {
-        return "Ingreso{" + "ingreso=" + ingreso + ", asunto=" + asunto + ", fecha=" + fecha + '}';
+        return "Ingreso: " + ingreso + ", Asunto: " + asunto + ", Fecha: " + fecha+"\n";
     }  
 }

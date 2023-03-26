@@ -18,10 +18,10 @@ public class Egreso {
     public Egreso() {
     }
 
-    public Egreso(double egreso, String asunto, LocalDate fecha) {
+    public Egreso(double egreso, String asunto) {
         this.egreso = egreso;
         this.asunto = asunto;
-        this.fecha = fecha;
+        this.fecha = LocalDate.now();
     }
 
     public double getEgreso() {
