@@ -58,9 +58,9 @@ public class Usuario {
     public void setSaldo(Saldo saldo) {
         this.saldo = saldo;
     }
-    
+
     @Override
     public String toString() {
-        return "nombre: " + nombre + ", correo: " + correo + ", contraseña: " + contraseña;
-    }
+        return "Usuario{" + "nombre=" + nombre + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + ", saldo=" + saldo + '}';
+    } 
 }

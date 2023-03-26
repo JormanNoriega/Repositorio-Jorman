@@ -70,4 +70,9 @@ public class Saldo {
     public void registrarDeudas(Deudas deudas) {
         this.deudas.add(deudas);
     }
+
+    @Override
+    public String toString() {
+        return "Saldo{" + "saldo=" + saldo + ", ingresos=" + ingresos + ", egresos=" + egresos + ", deudas=" + deudas + '}';
+    }    
 }
