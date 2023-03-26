@@ -4,6 +4,7 @@
  */
 package Vista;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import modelo.*;
 
@@ -20,10 +21,12 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        //Usuario usuarioRegistados[];
         Scanner sc = new Scanner(System.in);
         int OP=0;
+        double saldo;
         String usuario,contraseña,correo;       
-        RegistroUsuario registrosDeUsuarios = new RegistroUsuario();
         
         do{
             System.out.println("1) Iniciar Seccion."); 
@@ -39,8 +42,9 @@ public class Principal {
                     System.out.println("Usuario: ");
                     usuario=sc.nextLine();                   
                     System.out.println("Contraseña: ");
-                    contraseña=sc.nextLine(); 
-                    break;
+                    contraseña=sc.nextLine();
+                    validarAcceso(usuario,contraseña, usuarios);                   
+                    break;                    
                     
                 case 2:
                     System.out.println("Registro de Usuario");
@@ -49,10 +53,23 @@ public class Principal {
                     System.out.println("Contraseña: ");
                     contraseña=sc.nextLine();     
                     System.out.println("Correo: ");
-                    correo=sc.nextLine();                                       
-                    registrosDeUsuarios.registrarUsuario(new Usuario(usuario, correo, contraseña));   
+                    correo=sc.nextLine();
+                    System.out.println("Saldo Inicial: ");
+                    saldo=sc.nextDouble();
+                    usuarios.add(new Usuario(usuario, correo, contraseña,(new Saldo(saldo))));   
               break;        
             }  
-        }while(OP !=3);        
-    }   
+        }while(OP !=3);
+        }
+    
+        public void validarAcceso(String usernames, String passwords,ArrayList<Usuario> usuarios) {
+        for (int i = 0; i < usuarios.size(); i++) {
+            if ((usuarios.get(i).getNombre().equals(usernames)) && (usuarios.get(i).getContraseña().equals(passwords))) {
+                System.out.println("Usuario encontrado, bienvenido a la app");
+            }
+            else {
+                System.out.println("Error, usuario no encontrado o incorrecto");
+            }
+        }
+    }    
 }

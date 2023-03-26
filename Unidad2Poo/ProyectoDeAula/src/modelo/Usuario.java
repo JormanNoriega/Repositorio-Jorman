@@ -11,18 +11,20 @@ import java.util.ArrayList;
  * @author Jorman
  */
 public class Usuario {
+
     private String nombre;
     private String correo;
-    private String contraseña;   
-    
+    private String contraseña;
+    private Saldo saldo;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String correo, String contraseña) {
+    public Usuario(String nombre, String correo, String contraseña, Saldo saldo) {
         this.nombre = nombre;
         this.correo = correo;
         this.contraseña = contraseña;
+        this.saldo = saldo;
     }
 
     public String getNombre() {
@@ -47,10 +49,18 @@ public class Usuario {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
-    }  
+    }
 
+    public Saldo getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Saldo saldo) {
+        this.saldo = saldo;
+    }
+    
     @Override
-    public String toString() {      
-        return "nombre: " + nombre + ", correo: " + correo + ", contraseña: " + contraseña;       
-    }   
+    public String toString() {
+        return "nombre: " + nombre + ", correo: " + correo + ", contraseña: " + contraseña;
+    }
 }
