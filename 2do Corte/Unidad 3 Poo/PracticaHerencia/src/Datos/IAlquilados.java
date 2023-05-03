@@ -2,15 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package modelo;
+package Datos;
+
+import modelo.Vehiculo;
 
 /**
  *
  * @author Jorman
  */
-public interface Alquilados {
+public interface IAlquilados {
     
-    public void AgregarVehiculoRenta();
-    public void eliminarVehiculoDevuelto();
+    public abstract boolean AgregarVehiculoRenta();
+    public Vehiculo eliminarVehiculoDevuelto();
     public int getTotalAlquilados();
 }

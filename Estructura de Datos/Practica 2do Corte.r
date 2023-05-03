@@ -1,3 +1,4 @@
+/* PUNTO 1 */
 
 struct L1{
     int num;
@@ -8,7 +9,7 @@ struct L1{
 struct L2{
     int num;
     L2 *sig;
-} *p2, *q2, *r2, *cab2; 
+} *pos,*p2, *q2, *r2, *cab2; 
 
 ListaDescendente
     REPITA
@@ -22,7 +23,7 @@ ListaDescendente
         DD OP HAGA
             1:Agregar_Ordenado_Descendente_ListaDoble;
             2:Agregar_sinDuplicados_ListaSimple;
-            3:InsertarListas
+            3:InsertarListas;
         FIN DD
     HASTA(OP=3)
 FIN ListaDescendente
@@ -233,6 +234,54 @@ InsertarListas
         escribir("Listas combinadas exitosamente");
     FIN SI
 FIN InsertarListas
+
+
+
+
+
+/* PUNTO 2 */
+
+struct rubros{
+    int idRubro;
+    char NomRubro[50];
+    float SALDO;
+    rubros *Sig;
+    rubros *Ant;
+} *cab1, *p1, *q1, *fin1;
+
+struct proyectos{
+    int IdProyecto;
+    int IdRubro;
+    char NomProyecto[80];
+    char Estado;
+    proyectos *Sig;
+    proyectos *Ant;
+} *cab2, *p2, *q2, *fin2;
+
+struct auditoria{
+    int IdRubro
+    char NomRubro[50];
+    auditoria *Sig;
+    auditoria *Ant;
+} *cab3, *p3, *q3, *fin3;
+
+ListaRubros
+    REPITA
+        escribir("Programa De Rubros");
+        escribir("1. Agregar un Rubro");
+        escribir("2. Agregar un Proyecto");
+        escribir("3. ");
+        escribir("4. Salir");
+        escribir("Seleccione una Opcion: ");lea(OP);
+
+        DD OP HAGA
+            1:
+            2:
+            3:
+        FIN DD
+    HASTA(OP=3)
+FIN ListaRubros
+
 
         
 

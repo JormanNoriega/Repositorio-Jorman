@@ -4,13 +4,14 @@
  */
 package modelo;
 
+import Datos.IAlquilados;
 import java.util.ArrayList;
 
 /**
  *
  * @author Jorman
  */
-public abstract class Vehiculo implements Alquilados{
+public abstract class Vehiculo implements IAlquilados{
 
     protected String placa;
 
