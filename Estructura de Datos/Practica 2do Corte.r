@@ -9,7 +9,7 @@ struct L1{
 struct L2{
     int num;
     L2 *sig;
-} *pos,*p2, *q2, *r2, *cab2; 
+} *pos,*p2, *q2,*cab2; 
 
 ListaDescendente
     REPITA
@@ -204,28 +204,29 @@ InsertarListas
                 FIN SI
             SINO
                 /*elimino el nodo en la lista 2*/
-                r2 ← pos;
-                SI(r2↑.sig = nil)ENTONCES
+                
+                SI(pos.sig = nil)ENTONCES
                     /*Cuando es el Ultimo*/
                     q2 ← cab2;
-                    MQ(q2↑.sig <> r2)HAGA
+                    MQ(q2↑.sig <> pos)HAGA
                     q2 ← q2↑.sig;
                     FIN MQ
-                    q2↑.sig ← r2.sig
-                    dispose(r2);
+                    
+                    q2↑.sig ← pos.sig
+                    dispose(pos);
                     SINO
                         /*Cuando es el Primero*/
-                        SI(r2 = cab2)ENTONCES
+                        SI(pos = cab2)ENTONCES
                             cab2 ← cab2↑.sig;
-                            dispose(r2);
+                            dispose(pos);
                             SINO
                                 /*Cuando esta entre 2 nodos*/
                                 q2 ← cab2;
-                                MQ(q2↑.sig <> r2)HAGA
+                                MQ(q2↑.sig <> pos)HAGA
                                     q2 ← q2↑.sig;
                                 FIN MQ
-                                q2↑.sig ← r2↑.sig;
-                                dispose(r2);
+                                q2↑.sig ← pos.sig;
+                                dispose(pos);
                         FIN SI 
                 FIN SI   
             FIN SI

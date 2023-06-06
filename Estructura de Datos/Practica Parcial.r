@@ -96,7 +96,8 @@ INICIO algoritmo
     escribir("Desea ingresar mas Articulos?[S/N]")lea(Opcion)
     FIN MQ
 
-    ordenarDescendentemente
+
+    ordenarDescendentemente                   /*quickShort*/
             i<-primero
             j<-ultimo
             pivote<-A[int(primero+ultimo)/2]
