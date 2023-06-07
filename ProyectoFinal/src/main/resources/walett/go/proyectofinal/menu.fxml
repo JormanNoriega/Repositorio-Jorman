@@ -12,7 +12,7 @@
 
 <fx:root maxHeight="1.7976931348623157E308" prefHeight="900.0" prefWidth="1600.0" type="HBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="walett.go.proyectofinal.MenuController">
    <children>
-      <VBox prefHeight="898.0" prefWidth="265.0" style="-fx-background-color: #1c2833;">
+      <VBox prefHeight="898.0" prefWidth="265.0" style="-fx-background-color: #1B1F27;">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -21,14 +21,14 @@
                         <Font name="System Bold" size="40.0" />
                      </font>
                   </Text>
-                  <Text fill="#ee850e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="GO">
+                  <Text fill="#25b244" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="GO">
                      <font>
-                        <Font name="System Bold" size="43.0" />
+                        <Font name="System Bold" size="42.0" />
                      </font>
                   </Text>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #17202a;" stylesheets="@../../../styles/Styles.css" text="    INICIO">
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #13171C;" stylesheets="@../../../styles/Styles.css" text="    INICIO">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -43,7 +43,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #17202a;" stylesheets="@../../../styles/Styles.css" text="     CUENTA">
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #13171C;" stylesheets="@../../../styles/Styles.css" text="     CUENTA">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -58,7 +58,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #17202a;" stylesheets="@../../../styles/Styles.css" text="     GRÁFICAS">
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #13171C;" stylesheets="@../../../styles/Styles.css" text="     GRÁFICAS">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -73,7 +73,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #17202a;" stylesheets="@../../../styles/Styles.css" text="    SALIR">
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="211.0" style="-fx-background-color: #13171C;" stylesheets="@../../../styles/Styles.css" text="    SALIR">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -90,6 +90,6 @@
             </Button>
          </children>
       </VBox>
-      <StackPane prefHeight="150.0" prefWidth="1.335" />
+      <StackPane prefHeight="900.0" prefWidth="1.335" />
    </children>
 </fx:root>

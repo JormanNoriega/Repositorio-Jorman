@@ -25,7 +25,7 @@
                               <Font name="System Bold" size="50.0" />
                            </font>
                         </Text>
-                        <Text fill="#ee850e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="GO">
+                        <Text fill="#25b244" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="GO">
                            <font>
                               <Font name="System Bold" size="53.0" />
                            </font>
@@ -75,7 +75,7 @@
                   <PasswordField fx:id="password" prefHeight="45.0" style="-fx-background-color: #17202a;" />
                </children>
             </VBox>
-            <Button layoutX="27.0" layoutY="377.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="442.0" style="-fx-background-color: #EE850E;" stylesheets="@../../../styles/Styles.css" text="Iniciar Sesion" textFill="WHITE">
+            <Button layoutX="27.0" layoutY="377.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="442.0" style="-fx-background-color: #25B244;" stylesheets="@../../../styles/Styles.css" text="Iniciar Sesion" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

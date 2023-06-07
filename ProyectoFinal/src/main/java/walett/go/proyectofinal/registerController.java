@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.control.Hyperlink;
 
 /**
@@ -20,10 +21,31 @@ public class registerController implements Initializable {
     
     private Hyperlink  linkSesion;
     
+    @FXML 
+    private Button btnRegistrar;
+    
+    @FXML 
+    private TextField txtUsuario,txtNombre,txtEmail;
+    
+    @FXML
+    private PasswordField txtContraseña;
+    
+    
     @FXML
     public void clickSesion(ActionEvent a){
         
     }
+    
+    @FXML
+    public void clickRegistrar(ActionEvent a){
+        
+        
+    }
+    
+    
+    
+    
+    
 
     /**
      * Initializes the controller class.

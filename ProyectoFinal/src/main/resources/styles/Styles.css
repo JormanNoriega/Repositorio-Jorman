@@ -11,11 +11,10 @@
 }
 
 .check-box:selected .box {
-    -fx-background-color: #EE850E ;
+    -fx-background-color: #25B244 ;
 }
 
 .text-field:focused {
     -fx-text-fill: white;
 }
-
 
