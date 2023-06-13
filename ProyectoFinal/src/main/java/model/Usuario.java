@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -7,9 +8,10 @@ import java.util.ArrayList;
  *
  * @author Jorman Noriega, Julio Rios, Andres Contreras, Sergio Arango
  */
-public class Usuario {
+public class Usuario implements Serializable {
 
     //ATRIBUTOS
+    
     private String nombre;
     private String correo;
     private String contraseña;

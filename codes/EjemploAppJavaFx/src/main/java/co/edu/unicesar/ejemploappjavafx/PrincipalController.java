@@ -31,12 +31,10 @@ public class PrincipalController implements Initializable {
     private StackPane panel;
     
     @FXML
-    private void clickAutobus(ActionEvent e) throws IOException{
-        
+    private void clickAutobus(ActionEvent e) throws IOException{   
        StackPane autobus = new StackPane(App.loadFXML("autobu"));
        this.panel.getChildren().clear();
        this.panel.getChildren().add(autobus);
-    
     }
     
     @FXML

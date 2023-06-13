@@ -20,6 +20,7 @@ void EmpilarPila2(double dato);
 char DesempilarPila1();
 double DesempilarPila2();
 int Prioridad(char operado);
+bool validarExpresion(const char expresion[]);
 
 
 char PILA1[100];
@@ -28,19 +29,23 @@ double PILA2[100];
 int tope2 = -1;
  
 main(){
+	char opcion='S';
+	
+	while(opcion == 'S'){
 	char infija[100];
     string postfija;
     
     system("cls");
     system("color f0");
-    gotoxy(27,4); cout<<"CONVERTIDOR DE INFIJA A POSTFIJA";
-    gotoxy(27,5); cout<<"      by:JORMAN NORIEGA";
+    gotoxy(27,4); cout<<"CONVERSOR DE INFIJA A POSTFIJA";
+    gotoxy(27,5); cout<<"      By:JORMAN NORIEGA";
     gotoxy(15,8); cout<<"INGRESE LA EXPRESION INFIJA: ";
 	gotoxy(44,8); cin >> infija;
 	
-	for(int i = 0; i < strlen(infija); i++ ){
+	
+	if(validarExpresion(infija)==true){
+		for(int i = 0; i < strlen(infija); i++ ){
 		char caracter =	infija[i];
-		
 		if(isalpha(caracter)){
 			postfija+=caracter;//los += concatenan una posicion despues del ultimo		
 		}else{
@@ -68,11 +73,12 @@ main(){
 			}				
 		}
 	}
+	
 	while(PILA1_VACIA()=='N'){
 		postfija+=DesempilarPila1();		
 	}
 	gotoxy(15,10);cout<<"SU EXPRESION POSTFIJA ES: "<<postfija;
-	
+
 	for(int i = 0; i < postfija.length(); i++){
 		char caracter =	postfija[i];
 		if(isalpha(caracter)){
@@ -111,8 +117,15 @@ main(){
 		}	
 	}
 	double resultadoFinal = DesempilarPila2();
-    gotoxy(15, 14); cout << "EL RESULTADO ES: " << resultadoFinal;
-					
+    gotoxy(15, 14); cout << "EL RESULTADO ES: " << resultadoFinal;	
+	}
+	do{
+		gotoxy(15,16);cout<<"                                              ";
+		gotoxy(15,16);cout<<"DESEA CONVERTIR OTRA EXPRESION?[S/N]: ";
+		gotoxy(54,16);cin>>opcion;
+		opcion=toupper(opcion);
+	}while((opcion!='N')&&(opcion!='S'));
+	}
 }
 
 // PARA PILA 1
@@ -212,7 +225,19 @@ int Prioridad(char operador) {
     }
 }
 
-
+bool validarExpresion(const char expresion[]){
+	for(int i = 0; i < strlen(expresion); i++ ){
+		char caracter =	expresion[i];
+		if (isdigit(caracter)) {
+            gotoxy(15,11);cout << "ERROR: LA EXPRESION NO PUEDE CONTENER NUMEROS...";
+            return false;
+        } else if (strlen(expresion) < 3) {
+            gotoxy(15,11);cout << "ERROR: LA EXPRESION NO SER MENOR A 3 CARACTERES...";
+            return false;
+        } 	
+	}
+	return true;
+}
 
 
 
